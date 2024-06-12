@@ -6,8 +6,8 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Aya",
+    // url: "https://mister-hope.com",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -35,7 +35,7 @@ export default hopeTheme({
   },
 
   blog: {
-    description: "A FrontEnd programmer",
+    description: "This blog is a platform for sharing technical knowledge, aiming to help developers enhance their skills, explore new technologies, and solve real-world development challenges.",
     intro: "/intro.html",
     medias: {
       GitHub: "https://github.com/Ayaa17",
@@ -113,6 +113,7 @@ export default hopeTheme({
       mark: true,
       plantuml: true,
       spoiler: true,
+      mermaid: true,
       stylize: [
         {
           matcher: "Recommended",

@@ -2,46 +2,40 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  // "/demo/",
   {
-    text: "Posts sample",
+    text: "Tag",
+    icon: "book",
+    link: "tag/",
+  },
+  {
+    text: "Posts",
     icon: "pen-to-square",
     prefix: "/posts/",
     children: [
       {
-        text: "Apple",
+        text: "Own",
         icon: "pen-to-square",
-        prefix: "apple/",
+        prefix: "own/",
         children: [
-          { text: "Apple1", icon: "pen-to-square", link: "1" },
-          { text: "Apple2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
+          {
+            text: "AI",
+            icon: "pen-to-square",
+            link: "ai/",
+          },
         ],
       },
       {
-        text: "Banana",
+        text: "Reference",
         icon: "pen-to-square",
-        prefix: "banana/",
+        prefix: "ref/",
         children: [
           {
-            text: "Banana 1",
+            text: "temp",
             icon: "pen-to-square",
-            link: "1",
+            link: "ai/",
           },
-          {
-            text: "Banana 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
         ],
       },
-      { text: "Cherry", icon: "pen-to-square", link: "apple/" },
-      { text: "Dragon Fruit", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
     ],
   },
   {

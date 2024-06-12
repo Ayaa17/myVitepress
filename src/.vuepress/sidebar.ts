@@ -16,7 +16,7 @@ export default sidebar({
       prefix: "posts/",
       children: "structure",
     },
-    // "intro",
+    "intro",
     // {
     //   text: "Slides",
     //   icon: "person-chalkboard",
