@@ -2,9 +2,9 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/demo/",
+  // "/demo/",
   {
-    text: "Posts",
+    text: "Posts sample",
     icon: "pen-to-square",
     prefix: "/posts/",
     children: [
@@ -38,7 +38,7 @@ export default navbar([
           "4",
         ],
       },
-      { text: "Cherry", icon: "pen-to-square", link: "cherry" },
+      { text: "Cherry", icon: "pen-to-square", link: "apple/" },
       { text: "Dragon Fruit", icon: "pen-to-square", link: "dragonfruit" },
       "tomato",
       "strawberry",
