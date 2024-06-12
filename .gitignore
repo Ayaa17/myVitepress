@@ -117,7 +117,7 @@ src/.vuepress/dist/
 # vitepress build output
 docs/.vitepress/cache
 docs/.vitepress/dist
-public
+# public
 
 
 # Docusaurus cache and generated files
