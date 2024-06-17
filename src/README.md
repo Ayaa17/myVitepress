@@ -6,6 +6,7 @@ title: Blog Home
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroText: Aya's blog
 tagline: --nothing here--
+bgImage: /assets/images/cover3.jpg
 heroFullScreen: true
 # projects:
 #   - icon: project
