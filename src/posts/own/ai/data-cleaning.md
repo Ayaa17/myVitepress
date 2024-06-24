@@ -13,7 +13,7 @@ tag:
 
 正式存入數據庫之前，都要進行「數據清洗」，以確保數據的正確性、一致性、可驗證性、完整性、相依性等等。
 
-![training workflow](/src/posts/assets/alphacamp.co-blog-data-processing-and-data-cleaning.jpg)
+![training workflow](/assets/file_image/data-processing-and-data-cleaning.jpg)
 
 ## Why Data Cleaning
 在強調數據賦能的時代，企業必須開始重視數據資料的可用性。因此在資料蒐集與預先處理上，勢必得花上更多的心力，才能夠進行數據分析，企業才能享有數據所帶來的優勢:
