@@ -7,7 +7,7 @@ category:
 tag:
   - gesture
   - recognition
-  - image
+  - object detection
 ---
 
 # MediaPipe Gesture Recognition
