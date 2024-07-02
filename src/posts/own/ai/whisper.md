@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - voice recognition
+  - whisper
 ---
 # Whisper 
 
