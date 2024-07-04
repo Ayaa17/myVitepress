@@ -22,6 +22,11 @@ export default navbar([
             icon: "pen-to-square",
             link: "ai/",
           },
+          {
+            text: "Others",
+            icon: "pen-to-square",
+            link: "others/",
+          },
         ],
       },
       {
