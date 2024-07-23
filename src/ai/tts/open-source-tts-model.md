@@ -155,6 +155,13 @@ Please feel free to suggest or comment to clean this up or extend as you see fit
 - **Paper:** [SpeechT5: Unified-Modal Speech Pre-Training for Spoken Language Processing](https://arxiv.org/abs/2110.07205)
 - **Github:** [microsoft/SpeechT5](https://github.com/microsoft/SpeechT5)
 
+### SpeechBrain
+- **Submitted:** N/A
+- **Paper:** N/A
+- **Github:** [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain)
+- **Website:** [SpeechBrain](https://speechbrain.github.io/)
+
+
 ## Credits
 
 /u/M4xM9450’s comment on the topic of open source TTS models.
