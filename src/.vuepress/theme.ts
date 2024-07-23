@@ -86,6 +86,8 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+    
+    search: true,
 
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
