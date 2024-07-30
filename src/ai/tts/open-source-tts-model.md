@@ -161,6 +161,11 @@ Please feel free to suggest or comment to clean this up or extend as you see fit
 - **Github:** [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain)
 - **Website:** [SpeechBrain](https://speechbrain.github.io/)
 
+### Coqui-ai TTS
+- **Submitted:** N/A
+- **Paper:** [reference paper](https://github.com/coqui-ai/TTS-papers)
+- **Github:** [coqui-ai/TTS](https://github.com/coqui-ai/TTS)
+- **Website:** [coqui.ai](https://coqui.ai/)
 
 ## Credits
 
