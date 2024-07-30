@@ -68,17 +68,18 @@ IPython.display.Audio(f'generated-{CUSTOM_VOICE_NAME}.wav')
 Generated audio clip(s) as a torch tensor. Shape 1,S if k=1 else, (k,1,S) where S is the sample length. Sample rate is **24kHz**.
 
 - **eng text : Thanks for reading this article. I hope you learned something.**
+
 <audio controls>
-    <source src="./result/tts-english.wav" type="audio/mpeg">
+    <source src="@source/ai/tts/result/tts-english.wav" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
 
 - **zh text : 感謝您閱讀本文。我希望你學到了一些東西。**
+
 <audio controls>
-    <source src="./result/tts-zh.wav" type="audio/mpeg">
+    <source src="@source/ai/tts/result/tts-zh.wav" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
-
 
 ## Parameter
 
@@ -97,3 +98,4 @@ Generated audio clip(s) as a torch tensor. Shape 1,S if k=1 else, (k,1,S) where 
 
 ## Reference
 - [tortoise-tts githuub](https://github.com/neonbjb/tortoise-tts)
+- [Toolify.ai tortoise-tts](https://www.toolify.ai/zh/ai-news-cn/tortoise-tts%E7%A5%9E%E5%A5%87%E7%9A%84%E5%A4%9A%E5%A3%B0%E9%9F%B3%E6%96%87%E6%9C%AC%E8%BD%AC%E8%AF%AD%E9%9F%B3%E5%B7%A5%E5%85%B7-1075048)
