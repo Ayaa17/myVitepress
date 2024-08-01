@@ -72,14 +72,14 @@ Generated audio clip(s) as a torch tensor. Shape 1,S if k=1 else, (k,1,S) where 
 - **eng text : Thanks for reading this article. I hope you learned something.**
 
 <audio controls>
-    <source src="@source/ai/tts/result/tts-english.wav" type="audio/mpeg">
+    <source src="@source/ai/tts/result/tortoise-tts-en-result.wav" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
 
 - **zh text : 感謝您閱讀本文。我希望你學到了一些東西。**
 
 <audio controls>
-    <source src="@source/ai/tts/result/tts-zh.wav" type="audio/mpeg">
+    <source src="@source/ai/tts/result/tortoise-tts-zh-result.wav" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
 
