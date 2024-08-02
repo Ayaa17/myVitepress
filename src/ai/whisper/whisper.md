@@ -7,7 +7,7 @@ tag:
   - voice recognition
   - whisper
   - nlp
-
+order: 1
 ---
 # Whisper 
 

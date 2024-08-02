@@ -7,6 +7,7 @@ tag:
   - voice recognition
   - whisper
   - nlp
+order: 3
 ---
 # Fine-Tune Whisper For Multilingual ASR with huggingface Transformers
 
