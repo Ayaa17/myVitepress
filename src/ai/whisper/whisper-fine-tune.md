@@ -6,6 +6,7 @@ category:
 tag:
   - voice recognition
   - whisper
+  - nlp
 ---
 # Fine-Tune Whisper For Multilingual ASR with huggingface Transformers
 

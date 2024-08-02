@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - open-ai
+  - nlp
 ---
 # OpenAI api
 The OpenAI API provides a simple interface for developers to create an intelligence layer in their applications, powered by OpenAI's state of the art models. The Chat Completions endpoint powers ChatGPT and provides a simple way to take text as input and use a model like GPT-4o to generate an output.

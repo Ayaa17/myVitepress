@@ -6,6 +6,7 @@ category:
 tag:
   - tts
   - voice recognition
+  - nlp
 ---
 # Coqui.ai TTS
 

@@ -6,6 +6,8 @@ category:
 tag:
   - voice recognition
   - whisper
+  - nlp
+
 ---
 # Whisper 
 
