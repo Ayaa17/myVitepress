@@ -35,4 +35,6 @@ export default sidebar({
 
   "/ai/": "structure",
 
+  "/unity/": "structure",
+
 });

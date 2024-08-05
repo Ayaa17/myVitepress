@@ -15,7 +15,17 @@ export default navbar([
   {
     text: "Other",
     icon: "book",
-    link: "/others/",
+    // link: "/others/",
+    children: [
+              {
+                text: "Unity",
+                link: "unity/",
+              },
+              {
+                text: "Others",
+                link: "others/",
+              },
+            ],
   },
   // {
   //   text: "Posts",
