@@ -6,6 +6,7 @@ category:
 tag:
   - tts
   - voice recognition
+  - nlp
 order: 1
 ---
 # Open Source Text-to-Speech Models (TTS)

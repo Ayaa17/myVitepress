@@ -16,9 +16,11 @@ export default sidebar({
       prefix: "ai/",
       children: [
         "ml knowledge/",
+        "nlp/",
         "whisper/",
+        "tts/",
         "yolo/",
-        "application/"
+        "application/",
       ],
     },
     // "intro",

@@ -6,6 +6,8 @@ category:
 tag:
   - voice recognition
   - whisper
+  - nlp
+order: 2
 ---
 # Robust Speech Recognition via Large-Scale Weak Supervision
 

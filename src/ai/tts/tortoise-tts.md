@@ -6,6 +6,7 @@ category:
 tag:
   - tts
   - voice recognition
+  - nlp
 ---
 # Tortoise TTS
 Tortoise TTS是一個文字轉語音的程序，它可以將文字轉換為逼真的語音。這個程式有多個聲音，能夠模擬不同說話者的音色和語調。所以，你可以根據需要選擇不同的聲音風格。 Tortoise TTS程式的原始程式碼包含了在推理模式下運行所需的所有程式碼。
