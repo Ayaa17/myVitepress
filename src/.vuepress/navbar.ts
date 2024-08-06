@@ -13,6 +13,11 @@ export default navbar([
     link: "/ai/",
   },
   {
+    text: "Android",
+    icon: "mobile",
+    link: "/android/",
+  },
+  {
     text: "Other",
     icon: "book",
     // link: "/others/",

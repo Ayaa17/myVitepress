@@ -37,4 +37,6 @@ export default sidebar({
 
   "/unity/": "structure",
 
+  "/android/": "structure",
+
 });
