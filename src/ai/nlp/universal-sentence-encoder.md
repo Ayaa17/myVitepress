@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - nlp
+  - text classification
 ---
 # Universal Sentence Encoder
 使用 Universal Sentence Encoder 來進行句子相似度和句子分類任務。 Universal Sentence Encoder 可以輕鬆取得句子層級的嵌入向量，並計算句子之間的語意相似度。
@@ -121,3 +122,4 @@ def run_sts_benchmark(batch):
 - [kaggle-universal-sentence-encoder](https://www.kaggle.com/models/google/universal-sentence-encoder/tensorFlow1/lite/2?tfhub-redirect=true)
 - [使用 Multilingual Universal Sentence Encoder 研究跨语言相似度和构建语义搜索引擎](https://www.tensorflow.org/hub/tutorials/cross_lingual_similarity_with_tf_hub_multilingual_universal_encoder?hl=zh-cn)
 - [github-Ayaa17/nlu-sample](https://github.com/Ayaa17/nlu-sample)
+- [tensorflow-Text classification](https://tensorflow.google.cn/lite/examples/text_classification/overview)
