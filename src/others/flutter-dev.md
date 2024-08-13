@@ -138,3 +138,81 @@ tag:
    }
 
    ```
+
+## Bytearray -> Float32List Android 平台處理
+使用Float32List來處理浮點數的數據。如果您的Android端返回的是一個bytearray，您需要將其轉換為Float32List。以下是如何進行串接的步驟：
+1. **Android端** : 在Android端確保您將`float array`轉換為`byte array`。您可以使用`ByteBuffer`來實現這一點：
+
+    ```java
+    import java.nio.ByteBuffer;
+
+    public byte[] floatArrayToByteArray(float[] floatArray) {
+        ByteBuffer byteBuffer = ByteBuffer.allocate(floatArray.length * 4); // 4 bytes per float
+        for (float f : floatArray) {
+            byteBuffer.putFloat(f);
+        }
+        return byteBuffer.array();
+    }
+    ```
+2. **Flutter端** : 在Flutter端，您需要從Android端接收這個`bytearray`，並將其轉換為`Float32List`。假設您使用的是`MethodChannel`來進行通訊：
+
+    ```dart
+    import 'dart:typed_data';
+    import 'package:flutter/services.dart';
+
+    class FloatArrayReceiver {
+    static const platform = MethodChannel('your_channel_name');
+
+    Future<Float32List> getFloatArray() async {
+        try {
+        final List<dynamic> byteArray = await platform.invokeMethod('getFloatArray');
+        
+        // 將 List<dynamic> 轉換為 Uint8List
+        Uint8List uint8List = Uint8List.fromList(byteArray.cast<int>());
+        
+        // 將 Uint8List 轉換為 Float32List
+        Float32List float32List = Float32List.view(uint8List.buffer);
+        
+        return float32List;
+        } on PlatformException catch (e) {
+        print("Failed to get float array: '${e.message}'.");
+        return Float32List(0); // 返回空的 Float32List
+        }
+    }
+    }
+    ```
+3. **Android端的MethodChannel實現** : 確保在Android端正確設置`MethodChannel`來返回`bytearray`：
+
+    ```java
+    import io.flutter.embedding.engine.FlutterEngine;
+    import io.flutter.plugin.common.MethodChannel;
+
+    public class MainActivity extends FlutterActivity {
+        private static final String CHANNEL = "your_channel_name";
+
+        @Override
+        public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
+            super.configureFlutterEngine(flutterEngine);
+            new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
+                .setMethodCallHandler(
+                    (call, result) -> {
+                        if (call.method.equals("getFloatArray")) {
+                            float[] floatArray = {1, 512, 512, 1}; // Your float array
+                            byte[] byteArray = floatArrayToByteArray(floatArray);
+                            // 將 byteArray 轉換為 List<Integer> 並返回
+                            List<Integer> intList = new ArrayList<>();
+                            for (byte b : byteArray) {
+                                intList.add((int) b);
+                            }
+                            result.success(intList);
+                        } else {
+                            result.notImplemented();
+                        }
+                    }
+                );
+        }
+    }
+    ```
+
+4. **References** :  [一篇看懂android与flutter之间的通信](https://leetcode.jp/%E4%B8%80%E7%AF%87%E7%9C%8B%E6%87%82android%E4%B8%8Eflutter%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/)
+
