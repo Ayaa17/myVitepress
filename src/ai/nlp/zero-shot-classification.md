@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - nlp
+  - text classification
 ---
 # Zero-Shot Classification
 
@@ -14,7 +15,7 @@ Zero-shot classification 是一種自然語言處理任務，模型在訓練時�
 
 ### 1. 什麼是Zero-Shot Classification？
 
-零-shot分類是一種預測模型在訓練期間未見過的類別的方法。這種方法利用預訓練的語言模型，可以視為轉移學習的一種形式，特別適用於標記數據量較小的情況。
+Zero-Shot Classification是一種預測模型在訓練期間未見過的類別的方法。這種方法利用預訓練的語言模型，可以視為轉移學習的一種形式，特別適用於標記數據量較小的情況。
 
 Zero-Shot Learning（ZSL）是一種在訓練過程中未見過某些類別的樣本，但能夠在測試階段對這些類別進行分類的技術。這種學習方式通常依賴輔助信息來進行推斷。
 

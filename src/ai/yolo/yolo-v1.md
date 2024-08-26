@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - object detection
+  - image classification
 ---
 
 # YOLO: Real-Time Object Detection

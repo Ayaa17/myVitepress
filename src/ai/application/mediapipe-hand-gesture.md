@@ -8,6 +8,7 @@ tag:
   - gesture
   - recognition
   - object detection
+  - image classification
 ---
 
 # MediaPipe Gesture Recognition

@@ -18,6 +18,11 @@ export default navbar([
     link: "/android/",
   },
   {
+    text: "iOS",
+    icon: "mobile",
+    link: "/ios/",
+  },
+  {
     text: "Other",
     icon: "book",
     // link: "/others/",

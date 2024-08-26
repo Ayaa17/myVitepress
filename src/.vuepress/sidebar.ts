@@ -39,4 +39,6 @@ export default sidebar({
 
   "/android/": "structure",
 
+  "/ios/": "structure",
+
 });
