@@ -67,7 +67,8 @@ The OpenAI API provides a simple interface for developers to create an intellige
 
 - **Batch:** Batch requests for async jobs [**(link)**](https://platform.openai.com/docs/guides/batch)
 
-
+## Sample code
+### [open-ai sample code](https://github.com/Ayaa17/open-ai-api)
 
 ## Reference
 - [open ai docs](https://platform.openai.com/docs/quickstart)
