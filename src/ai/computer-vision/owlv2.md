@@ -36,6 +36,27 @@ OWLv2 使用自我訓練（self-training）方法來擴展訓練數據集。這�
 將這些偽標註用作新的訓練數據，從而增加可用的訓練樣本數量。
 通過這種方式，OWLv2 可以從 Web 上獲取的圖像-文本對中學習，從而擴展其檢測能力。
 
+### 輸出資料的結構
+
+- **image_embeds**：
+
+  - 形狀為 `(1, 60, 60, 768)` 的張量，表示影像嵌入。這裡的 `60` 是將 960x960 的影像分割為 60x60 的 patches 後得到的數量。
+
+- **query_image_embeds**：
+
+  - 形狀為 `(1, 60, 60, 768)` 的張量，表示查詢影像的嵌入。
+
+- **class_embeds**：
+
+  - 形狀為 `(1, 3600, 512)` 的張量，表示每個框對應的類別嵌入，其中 `3600` 是偵測框的數量。
+
+- **logits**：
+
+  - 形狀為 `(1, 3600, 1)` 的張量，表示每個框對應的目標偵測置信機率。
+
+- **target_pred_boxes**：
+  - 形狀為 `(1, 3600, 4)` 的張量，表示每個框對應的偵測框位置，通常以四元組形式表示（x_min, y_min, x_max, y_max）。
+
 ### 性能
 
 OWLv2 在多個基準測試中表現出色，特別是在零樣本物體檢測任務上。具體的性能數據如下：
@@ -43,9 +64,9 @@ OWLv2 在多個基準測試中表現出色，特別是在零樣本物體檢測�
 在 LVIS 數據集的稀有類別上，AP（平均精度）從 31.2%提升到 44.6%，顯示出 43%的相對提升。
 OWLv2 能夠在超過 1B 的樣本上進行訓練，這使得其在開放世界定位任務中的性能得到了顯著提升。
 
-- **優勢**: OWLv2在zero-shot目標檢測方面表現出色，顯著減少了人工標註的需求。模型的自我訓練能力使其能夠擴展到網路規模的資料集，進一步增強了其實用性和應用潛力。
+- **優勢**: OWLv2 在 zero-shot 目標檢測方面表現出色，顯著減少了人工標註的需求。模型的自我訓練能力使其能夠擴展到網路規模的資料集，進一步增強了其實用性和應用潛力。
 
-- **限制**: 儘管OWLv2代表了顯著的進步，但對大規模資料集的依賴以及其transformers架構的複雜性可能會在運算資源和客製化最佳化方面帶來挑戰。
+- **限制**: 儘管 OWLv2 代表了顯著的進步，但對大規模資料集的依賴以及其 transformers 架構的複雜性可能會在運算資源和客製化最佳化方面帶來挑戰。
 
 ## 主要特點
 
@@ -71,3 +92,7 @@ OWLv2 模型可以通過 Hugging Face 的 Transformers 庫輕鬆使用。可參�
 - [transformers - OWLv2](https://huggingface.co/docs/transformers/main/en/model_doc/owlv2)
 - [huggingface model - owlv2](https://huggingface.co/google/owlv2-base-patch16-ensemble)
 - [github - owl-vit](https://github.com/google-research/scenic/tree/main/scenic/projects/owl_vit)
+- [csdn - owlv2](https://blog.csdn.net/lanlinjnc/article/details/135530969)
+- [csdn](https://blog.csdn.net/wizardforcel/article/details/139897835)
+- [程式碼提供](https://huggingface.co/nielsr)
+- [huggingface github - owlv2](https://github.com/huggingface/transformers/blob/main/docs/source/en/model_doc/owlv2.md)
