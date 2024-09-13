@@ -28,6 +28,10 @@ export default navbar([
     // link: "/others/",
     children: [
               {
+                text: "Python",
+                link: "python/"
+              },
+              {
                 text: "Unity",
                 link: "unity/",
               },

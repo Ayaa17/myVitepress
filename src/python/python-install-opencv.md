@@ -2,9 +2,10 @@
 icon: pen-to-square
 date: 2024-09-12
 category:
-  - Others
+  - Python
 tag:
   - python
+  - opencv
 ---
 
 # python install open-cv
