@@ -35,6 +35,8 @@ export default sidebar({
 
   "/ai/": "structure",
 
+  "/python/": "structure",
+
   "/unity/": "structure",
 
   "/android/": "structure",
