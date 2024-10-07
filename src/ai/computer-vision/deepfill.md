@@ -5,6 +5,7 @@ category:
   - AI
 tag:
   - image restoration
+  - image Reconstruction
   - image inpainting
 ---
 
