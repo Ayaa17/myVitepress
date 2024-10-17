@@ -45,16 +45,16 @@ ECCV 2018 paper, Nvidia 團隊提出
 公式如下：
 
 - 卷積操作：
-  ![公式](./iamge/partial-convolution-function-1.jpg)
+  ![公式](./images/partial-convolution-function-1.jpg)
   其中，$X$ 為卷積輸入，$M$ 為二值掩碼，$W$ 為卷積核權重，$b$ 為偏壓。
 
 - 遮罩更新：
-  ![公式](./iamge/partial-convolution-function-2.jpg)
+  ![公式](./images/partial-convolution-function-2.jpg)
 
 ### 網路結構
 
 網路採用類似**U-Net**的結構，所有捲積層均替換為部分卷積層，並在解碼階段使用最近鄰插值進行上取樣。跳躍連接傳遞特徵圖和掩碼，確保修復過程中遮罩的正確更新。
-![arch](./iamge/partial-convolution-arch.jpg)
+![arch](./images/partial-convolution-arch.jpg)
 
 ### 損失函數
 
