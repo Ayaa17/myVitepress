@@ -53,7 +53,7 @@ tag:
 
 ### 網路架構
 
-![deepfill-network](./iamge/deepfill-network.jpg)
+![deepfill-network](./images/deepfill-network.jpg)
 論文中的 Figure 2 展示了這個生成影像修復框架的概覽，具體如下：
 
 - **粗略網路**：使用重建損失進行訓練。
