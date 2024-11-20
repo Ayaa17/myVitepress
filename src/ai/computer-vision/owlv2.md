@@ -17,8 +17,8 @@ OWLv2 擴展了先前的 OWLVit 模型，利用自我訓練的方法，通過使
 ### [論文連結](https://arxiv.org/pdf/2306.09683)
 
 該論文中提到，開放詞彙物體檢測受益於預訓練的視覺-語言模型，但仍受到可用檢測訓練數據量的限制。研究者們提出了 OWLv2 模型及其自我訓練方法，解決了標籤空間的選擇、偽標註過濾和訓練效率等挑戰。
-![owl-vit-overview](./iamge/owl-vit-overview.jpg)
-![owlv2-overview](./iamge/owlv2-overview.jpg)
+![owl-vit-overview](./images/owl-vit-overview.jpg)
+![owlv2-overview](./images/owlv2-overview.jpg)
 
 ### 模型架構
 
