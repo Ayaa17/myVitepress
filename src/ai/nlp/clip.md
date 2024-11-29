@@ -22,7 +22,7 @@ CLIP (Contrastive Language-Image Pre-Training) 是一種在各種（圖像，文
 CLIP的架構主要由文本編碼器和圖像編碼器組成：
 - **文本編碼器**：使用Transformer模型處理自然語言，將文字轉換為數值表示。
 - **圖像編碼器**：使用神經網絡模型（如ResNet或Vision Transformer）處理圖像數據，將圖像轉換為數值表示。
-![clip-arch](./image/clip-arch.png)
+![clip-arch](./images/clip-arch.png)
 
 ## 訓練過程
 CLIP的訓練過程包括以下步驟：
