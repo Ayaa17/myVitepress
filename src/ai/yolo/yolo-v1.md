@@ -16,7 +16,7 @@ You only look once (YOLO) is a state-of-the-art, real-time object detection syst
 
 ## YOLO Detection System
 
-![yolo detection system](./image/yolo-v1-detection-system.jpg)
+![yolo detection system](./images/yolo-v1-detection-system.jpg)
 
 ### Processing images with YOLO is simple and straightforward.
 
@@ -26,23 +26,23 @@ You only look once (YOLO) is a state-of-the-art, real-time object detection syst
 
 ## Network Architecture
 
-![yolo-v1-arch](./image/yolo-v1-architechture.jpg)
+![yolo-v1-arch](./images/yolo-v1-architechture.jpg)
 
 ## Unified Detection
 
     YOLO 將圖像切成 𝑆×𝑆 個網格，如果物件的中心位於某一個網格內，則由此網格負責此物件的偵測。
 
-![image grid](./image/yolo-v1-grid.jpg)
+![image grid](./images/yolo-v1-grid.jpg)
 
     每一個格子各自預測5個邊界框(bounding box)及其對應的信心分數(confidence score)。也會預測該格為何種物體。
 
     下圖為例，分別預測出邊界框及該格物體。(邊界框越粗代表信心分數越高)。
 
-![image prediction](./image/yolo-v1-pred.jpg)
+![image prediction](./images/yolo-v1-pred.jpg)
 
     輸出矩陣如下
 
-![prediction sample](./image/yolo-v1-pred-sample.jpg)
+![prediction sample](./images/yolo-v1-pred-sample.jpg)
 
 ## Training
 
@@ -69,7 +69,7 @@ You only look once (YOLO) is a state-of-the-art, real-time object detection syst
   1. 增加了在 bounding box 座標預測的 loss 權重 (λcoord=5)
   2. 減低那些不包含物件的 Box，confidence 預測時的權重(λnoobj=0.5)
 
-  ![yolo-v1-loss](./image/yolo-v1-loss.jpg)
+  ![yolo-v1-loss](./images/yolo-v1-loss.jpg)
 
 ## YOLO 的缺點及問題
 
