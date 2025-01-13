@@ -67,7 +67,7 @@ English only.
 - training detail：using FP16, Models were trained with AdamW and gradient norm clipping, batch size of 256 segments was used, between two and three passes over the dataset
 
 - Hyperparameters：
-    ![Hyperparameters：](./image/whisper-hyperparameters.jpg)
+    ![Hyperparameters：](./images/whisper-hyperparameters.jpg)
 
 ### Multitask 
 Whisper 模型共處理四個任務，如圖左上所示。
@@ -78,7 +78,7 @@ Whisper 模型共處理四個任務，如圖左上所示。
 
 所有這些任務都由解碼器預測的 token 序列表示，這使得一個模型能夠處理多個任務。這幾個任務及模型輸出 token 的關係可以從圖中下方的圖示中的 token 序列看出：在 START OF TRANSCRIPT token 之後，如果當前無人說話，則識別為 NO SPEECH 。如果有人說話，則辨識出目前語音所屬的語言 LANGUAGE TAG 。然後有兩種可能的任務 TRANSCRIBE 還是翻譯任務 TRANSLATE ，這兩種任務又分為兩種形式：帶時間戳的和不帶時間戳的，分別穿插或不穿插時間戳 token ，預測出文本 token。最後到達 EOT token，整個流程結束。
 
-![Approach](./image/whisper-approach.png)
+![Approach](./images/whisper-approach.png)
 
 
 ## 3. 實驗與結果
@@ -94,21 +94,21 @@ Whisper 是沒有在其他人工標註的語音辨識資料集上訓練的，也
 在各個結果比較中，Whisper顯示出有著較高的robustness，且該架構設計也能符合訓練集越多該語言效果越好的趨勢，且在SNR在15時還是有不錯的表現。
 
 整體Performance大約與人類相同。
-![performance](./image/whisper-performance.jpg)
+![performance](./images/whisper-performance.jpg)
 
 ## 4. Analysis
 此部分解析了模型架構上的各個改變及其效果變化
 
 - Model Scaling
-    ![model scale](./image/whisper-model-scale.jpg)
+    ![model scale](./images/whisper-model-scale.jpg)
 - Dataset Scaling
-    ![dataset scale](./image/whisper-increase-dataset.jpg)
+    ![dataset scale](./images/whisper-increase-dataset.jpg)
 - Multitask and Multilingual Transfer
-    ![multilingual scale](./image/whisper-model-multilingual.jpg)
+    ![multilingual scale](./images/whisper-model-multilingual.jpg)
 -  Text Normalization -> section 4.5
-    ![text normalizer](./image/whisper-text-normalizer.jpg)
+    ![text normalizer](./images/whisper-text-normalizer.jpg)
 -  Strategies for Reliable Long-form Transcription
-    ![decoding heuristics](./image/whisper-decoding-heuristics.jpg)
+    ![decoding heuristics](./images/whisper-decoding-heuristics.jpg)
 
 ## 5. Limitations and Future Work
 - Improved decoding strategies.
