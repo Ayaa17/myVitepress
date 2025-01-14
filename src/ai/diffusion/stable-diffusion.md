@@ -50,6 +50,23 @@ Stable Diffusion 是一種基於 Latent Diffusion Models (LDM) 的高效擴散�
 
 ![stable-diffusion model](./images/stable-diffusion-flow.webp)
 
+### **簡化流程圖**
+
+```scss
+提示詞 (Prompt)
+    ↓
+Text Encoder (CLIP) → 文字潛空間表示
+    ↓
+初始噪聲 (Random Noise)
+    ↓
+Diffusion Process (擴散過程)
+    ├─ 使用 Sampling Method (控制每一步去噪)
+    ↓
+去噪完成 (Latent Representation)
+    ↓
+Decoder (VAE) → 最終圖像
+```
+
 ### **訓練框架**
 
 - **潛在壓縮模型**：通過自編碼器（Autoencoder）對輸入圖像進行壓縮，得到低維的潛在表示。
@@ -91,3 +108,4 @@ $$
 - [論文閱讀 High-Resolution Image Synthesis with Latent Diffusion Models](https://blog.csdn.net/weixin_57974242/article/details/134180461)
 - [Stable diffusion — High-Resolution Image Synthesis with Latent Diffusion Models](https://medium.com/image-processing-and-ml-note/stable-diffusion-high-resolution-image-synthesis-with-latent-diffusion-models-926576f8df26)
 - [[论文阅读] High-Resolution Image Synthesis with Latent Diffusion Models](https://www.cnblogs.com/lichunlei/p/18521616)
+- [AI 绘画 Stable Diffusion 研究（七） 一文读懂 Stable Diffusion 工作原理\_noise schedule-CSDN 博客](https://blog.csdn.net/lizhong2008/article/details/132257722)
