@@ -1,3 +1,13 @@
+---
+icon: pen-to-square
+date: 2025-01-13
+category:
+  - AI
+tag:
+  - diffusion model
+  - image generation
+---
+
 # 擴散模型（Diffusion Models）完整介紹
 
 ## **簡介**
