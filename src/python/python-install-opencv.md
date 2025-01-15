@@ -24,6 +24,14 @@ Failed to build opencv-python
 ERROR: Could not build wheels for opencv-python which use PEP 517 and cannot be installed directly
 ```
 
+## Solution for Lazy
+
+OpenCV Headless 版本是指不包含 GUI (圖形用戶界面) 支援的 OpenCV 版本，主要用於不需要顯示或處理圖像顯示的場景，例如在服務器環境或容器中運行時。這樣可以減少不必要的依賴和資源使用。
+
+```
+pip install opencv-python-headless
+```
+
 ## Solution for py >= 3.7 (windows)
 
 ```
@@ -41,39 +49,39 @@ pip install opencv-python==4.5.5.64
 
 if using docker get eroor like this:
 
-  ```sh
-  >>> import cv2
-  Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    File "/usr/local/lib/python3.6/dist-packages/cv2/__init__.py", line 8, in <module>
-      from .cv2 import *
-  ImportError: libGL.so.1: cannot open shared object file: No such file or directory
-  ```
+```sh
+>>> import cv2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python3.6/dist-packages/cv2/__init__.py", line 8, in <module>
+    from .cv2 import *
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+```
 
 ### run:
 
-  ```sh
-  RUN apt-get update
-  RUN apt-get install -y libgl1-mesa-glx
-  ```
+```sh
+RUN apt-get update
+RUN apt-get install -y libgl1-mesa-glx
+```
 
 ### final docoker image like this:
 
-  ```DockerFile
-  FROM image as base
+```DockerFile
+FROM image as base
 
-  RUN apt-get install -y libgl1-mesa-glx
-  RUN apt-get clean
+RUN apt-get install -y libgl1-mesa-glx
+RUN apt-get clean
 
-  WORKDIR /app
+WORKDIR /app
 
-  RUN pip install --upgrade pip
-  RUN pip install opencv-python
+RUN pip install --upgrade pip
+RUN pip install opencv-python
 
-  EXPOSE 8888
+EXPOSE 8888
 
-  CMD ["bash"]
-  ```
+CMD ["bash"]
+```
 
 ## Reference
 

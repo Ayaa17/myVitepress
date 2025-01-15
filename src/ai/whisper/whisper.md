@@ -15,7 +15,7 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 
 ## Approach
 
-![Approach](./image/whisper-approach.png)
+![Approach](./images/whisper-approach.png)
 
 ## Available models and languages
 
@@ -32,7 +32,7 @@ There are five model sizes, four with English-only versions, offering speed and 
 
 Whisper 的表現因語言而異。下圖顯示了按語言large-v3和模型的表現細分，使用在 Common Voice 15 和 Fleurs 資料集上評估的large-v2WER（單字錯誤率）或 CER（字元錯誤率，以斜體顯示）。
 
-![languages](./image/whisper-languages.png)
+![languages](./images/whisper-languages.png)
 
 ## Python usage
 
