@@ -133,6 +133,8 @@ Stable Diffusion Web UI 提供了一個直觀的網頁界面，讓用戶可以�
 
 Sampling Method 是指選擇圖像生成過程中使用的采样算法（Sampling Algorithm）。這些方法會直接影響生成圖像的質量、細節、風格和生成速度。
 
+// Todo: put list here
+
 - A list
 - B list
 
@@ -246,7 +248,31 @@ $$
 
 ## LoRA
 
-LoRA (Low-Rank Adaptation) 是一種輕量化的模型調整技術，廣泛應用於大模型（如 Stable Diffusion 或 Transformer 類模型）的微調，尤其在資源有限或需要快速適配新任務的情況下。
+LoRA (Low-Rank Adaptation) 是一種輕量化的模型調整技術，廣泛應用於大模型（如 Stable Diffusion 或 Transformer 類模型）的微調，尤其在資源有限或需要快速適配新任務的情況下。主要功能，在於可以搭配現有的 Checkpoint 模型，並介入 AI 推論的運算過程，發揮控制生成畫面內容的效果。
+
+在 Stable Diffusion 的應用範圍中，LoRA 可以發揮控制人物特色、服裝、指定角色、改變畫面風格等效果。舉個例子來說，Checkpoint 就像是 AI 畫家的「基本畫功」，而 LoRA 則是要求 AI 畫家「照這個風格」產生圖片。
+
+### **使用 LoRA**
+
+1. 將 LoRA 文件放入 WebUI 的 `models/Lora` 資料夾。
+2. 在 `Prompt` 中引用：
+   ```
+   <lora:my_lora_model:0.8>
+   ```
+   - `0.8` 是 LoRA 權重，通常設置在 0.6-1.0。
+
+使用許多 LoRA 時將權重降低至 0.6~0.8 會有比較好的效果，使用過高的權重容易造成畫面錯亂，尤其在混用多組 LoRA 時狀況更顯著。
+
+#### 提示詞範例
+
+```sh
+# 正面提示詞
+(masterpiece, top quality, best quality, official art, beautiful and aesthetic:1.2), (1girl), extreme detailed,colorful, ((solo)),
+steampunk city, china dress, (small breast),
+<lora:taeTakemiPersona5_v10:0.8>, (Tae Takemi), necklace, choker, <lora:personaCatherineSoejima_1:0.6>
+# 負面提示詞
+(worst quality, low quality:2), monochrome, zombie,overexposure, watermark,text,bad anatomy,bad hand,extra hands,extra fingers,too many fingers,fused fingers,bad arm,distorted arm,extra arms,fused arms,extra legs,missing leg,disembodied leg,extra nipples, detached arm, liquid hand,inverted hand,disembodied limb, small breasts, loli, oversized head,extra body,completely nude, extra navel,easynegative,(hair between eyes),sketch, duplicate, ugly, huge eyes, text, logo, worst face, (bad and mutated hands:1.3), (blurry:2.0), horror, geometry, bad_prompt, (bad hands), (missing fingers), multiple limbs, bad anatomy, (interlocked fingers:1.2), Ugly Fingers, (extra digit and hands and fingers and legs and arms:1.4), ((2girl)), (deformed fingers:1.2), (long fingers:1.2),(bad-artist-anime), bad-artist, bad hand, extra legs ,(ng_deepnegative_v1_75t)
+```
 
 ## Add Extension
 
@@ -273,3 +299,6 @@ LoRA (Low-Rank Adaptation) 是一種輕量化的模型調整技術，廣泛應�
 - [sd 采样方法详解\_sd 采样方法有什么区别-CSDN 博客](https://blog.csdn.net/lizhong2008/article/details/132278253)
 - [This is why u should use hi-res fix-reddit](https://www.reddit.com/r/StableDiffusion/comments/17oy893/this_is_why_u_should_use_hires_fix/)
 - [微調大型語言模型 LLM 的技術 LoRA 及生成式 AI-Stable diffusion LoRA](https://xiaosean5408.medium.com/%E5%BE%AE%E8%AA%BF%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8Bllm%E7%9A%84%E6%8A%80%E8%A1%93lora%E5%8F%8A%E7%94%9F%E6%88%90%E5%BC%8Fai-stable-diffusion-lora-61a41d636772)
+- [Stable Diffusion AI 算圖使用手冊（4-1）：透過 LoRA 小模型收束角色特性](https://www.techbang.com/posts/105902-stable-diffusion-lora)
+- [How To Do Stable Diffusion LORA Training By Using Web UI On Different Models - Tested SD 1.5, SD 2.1](https://www.youtube.com/watch?v=mfaqqL5yOO4&ab_channel=SECourses)
+- [(請改用 kohya)Stable Diffusion-LoRA 模型訓練-安裝及基礎概念篇-舊版](https://www.youtube.com/watch?v=gFBmIL51x-M&ab_channel=%E6%9D%B0%E5%85%8B%E8%89%BE%E7%B1%B3%E7%AB%8B)
