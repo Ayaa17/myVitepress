@@ -5,6 +5,7 @@ category:
   - Android
 tag:
   - android
+  - jetpack-compose
 ---
 
 # Jetpack Compose
@@ -263,7 +264,7 @@ LazyColumn {
 }
 ```
 
-## Referenec
+## Reference
 
 - [Jetpack Compose 官方範例](https://developer.android.com/codelabs/jetpack-compose-basics?hl=zh-tw#0)
 - [Compose 對應 Kotlin 的相容性清單](https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-tw)
