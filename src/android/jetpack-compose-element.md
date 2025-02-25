@@ -98,6 +98,48 @@ fun SampleSpinner_Preview() {
 
 </details>
 
+## Lazy list (RecyclerView/ListView)
+
+![android-jetpack-compose-listview](./iamges/andorid-jetpack-compose-listview.gif)
+
+<details>
+
+<summary>sample code</summary>
+
+```kotlin
+
+@Composable
+fun ListAnimatedItems(
+    items: List<String>,
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(modifier) {
+        // Use a unique key per item, so that animations work as expected.
+        items(items, key = { it }) {
+            ListItem(
+                headlineContent = { Text(it) },
+                modifier = Modifier
+                    .animateItem(
+                        // Optionally add custom animation specs
+                    )
+                    .fillParentMaxWidth()
+                    .padding(horizontal = 8.dp, vertical = 0.dp),
+            )
+        }
+    }
+}
+
+```
+
+### reference
+
+- [android develop lists](https://developer.android.com/develop/ui/compose/lists?hl=zh-tw)
+- [android develop recycler-view](https://developer.android.com/develop/ui/compose/migrate/migration-scenarios/recycler-view?hl=zh-tw)
+- [android sample code](https://github.com/android/snippets/blob/b9c07aa82e81dbcf14a515fdc166f1a8ac7e7779/compose/snippets/src/main/java/com/example/compose/snippets/lists/AnimatedOrderedList.kt)
+- [Android 推坑 JetpackCompose 之 ListView RecyclerView 篇](https://a0924xxx.medium.com/android-%E6%8E%A8%E5%9D%91-jetpackcompose-%E4%B9%8B-listview-recyclerview-%E7%AF%87-7c1c38b44d7a)
+
+</details>
+
 ## Reference
 
 - [Android - create Spinner with Compose](https://stackoverflow.com/questions/65632626/android-create-spinner-with-compose)
