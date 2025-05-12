@@ -280,6 +280,64 @@ To help maintain app compatibility on Android 12, the Google app uses a trampoli
 
 Apps should use the device's default provider for SpeechService, rather than hard-coding a specific app.
 
+## 系統支援語音
+
+### 可用語言列表（按語系分類）：
+
+- 節錄於 2025/5/12
+
+#### 英語（English）
+
+- English (US)
+- English (Australia)
+- English (Canada)
+- English (India)
+- English (Ireland)
+- English (Singapore)
+- English (UK)
+
+#### 中文（Chinese）
+
+- 國語 (台灣)
+- 普通话 (中國大陸)
+
+#### 日語／韓語／東亞
+
+- 日本語 (日本)
+- 한국어 (대한민국)
+
+#### 南亞語系
+
+- हिन्दी (भारत)
+
+#### 東南亞語系
+
+- Bahasa Indonesia (Indonesia)
+- Tiếng Việt (Việt Nam)
+- ไทย (ประเทศไทย)
+
+#### 西歐語系
+
+- Deutsch (Deutschland)
+- Deutsch (Belgien)
+- Deutsch (Schweiz)
+- Deutsch (Österreich)
+- Français (France)
+- Français (Belgique)
+- Français (Suisse)
+- Français (Canada)
+- Italiano (Italia)
+- Italiano (Svizzera)
+
+#### 其他歐語
+
+- Español (EE.UU.)
+- Español (España)
+- Português (Brasil)
+- Polski (Polska)
+- Русский (Россия)
+- Türkçe (Türkiye)
+
 ## Reference
 
 - [SpeechRecognizer.CreateOnDevizer.CreateRecojizer.com "SpeechRecognizer.CreateOnDevizer.CreateRecoin](https://learn.microsoft.com/en-us/dotnet/api/android.speech.speechrecognizer.createondevicespeechrecognizer?view=net-android-34.0&utm_source=chatgpt.com)
