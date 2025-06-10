@@ -1,4 +1,14 @@
-# 模型上下文協議（Model Context Protocol, MCP）概述
+---
+icon: pen-to-square
+date: 2025-04-21
+category:
+  - AI
+tag:
+  - mcp
+  - llm
+---
+
+# Model Context Protocol
 
 ## 摘要
 
